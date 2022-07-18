@@ -49546,7 +49546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 21718163}
   _bullet: {fileID: 2519117698601655016, guid: 5c3f774e703127a48bf935f5880acdd0, type: 3}
-  _shootSpeed: 0.55
+  _shootSpeed: 1
   _shootSound: {fileID: 1721859673075176}
   _shotAudio: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
 --- !u!82 &1721859673075176

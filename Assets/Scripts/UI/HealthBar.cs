@@ -34,8 +34,7 @@ public class HealthBar : MonoBehaviour
 
     private void ChangedCurrentValue(float value)
     {
-        if (_slider.maxValue != _player.MaxHealth)
-            _slider.maxValue = _player.MaxHealth;
+        _slider.maxValue = _player.MaxHealth;
 
         _currentValue = value;
     }

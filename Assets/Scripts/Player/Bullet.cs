@@ -4,17 +4,13 @@ public class Bullet : MonoBehaviour
 {
     private float _speed = 200;
     private float _damage = 1;
-    private float _lifeTime = 0;
-    private float _maxLifeTime = 5f;
-  
+    private float _lifeTime = 2f;
+
     private void Update()
     {
-        _lifeTime += Time.deltaTime;
-
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
 
-        if(_lifeTime>_maxLifeTime)
-            Destroy(gameObject);
+        Destroy(gameObject,_lifeTime);
     }
 
     private void OnCollisionEnter(Collision collision)
