@@ -37,7 +37,7 @@ public class PoolObject : MonoBehaviour
             return resul = null;
     }
 
-    public void ResetPool()
+    public void DisableAllObjects()
     {
         foreach (var item in _pool)
         {

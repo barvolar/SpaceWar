@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
         _player.gameObject.SetActive(true);
         _player.Restart();
         _spawner.gameObject.SetActive(true);
-        _spawner.ResetPool();
+        _spawner.DisableAllObjects();
         gameObject.SetActive(false);
     }
 }
