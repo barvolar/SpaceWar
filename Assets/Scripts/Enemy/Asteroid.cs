@@ -7,25 +7,26 @@ public class Asteroid : MonoBehaviour
     private Player _player;
     private Rigidbody _rigidBody;
     private float _speed = 3000f;
-    private float _health=2f;
+    private float _health = 2f;
     private Vector3 _rotate;
     private float _minRotateValue = -90;
     private float _maxRotateValue = 90;
+    private float _damage = 1f;
+    private float _maxPositionZ = -50;
 
-    public float Damage { get; private set; }
+    public float Damage => _damage;
 
     private void Start()
     {
-        Damage = 1f;
         _rigidBody = GetComponent<Rigidbody>();
-        _rotate=new Vector3(Random.Range(_minRotateValue,_maxRotateValue), Random.Range(_minRotateValue, _maxRotateValue), Random.Range(_minRotateValue, _maxRotateValue));
+        _rotate = new Vector3(Random.Range(_minRotateValue, _maxRotateValue), Random.Range(_minRotateValue, _maxRotateValue), Random.Range(_minRotateValue, _maxRotateValue));
     }
 
     private void Update()
     {
-        transform.Rotate(_rotate*Time.deltaTime);
-        
-        if(transform.position.z < -50)
+        transform.Rotate(_rotate * Time.deltaTime);
+
+        if (transform.position.z < _maxPositionZ)
             gameObject.SetActive(false);
     }
 
