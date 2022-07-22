@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spawner : PoolObject
 {
     [SerializeField] private GameObject[] _templates;
-    [SerializeField] private Player _player;
+    [SerializeField] private Score _score;
     [SerializeField] private float _timeBetweenSpawn;
     [SerializeField] private float _minSpawnPositionX;
     [SerializeField] private float _maxSpawnPositionX;
@@ -15,7 +15,7 @@ public class Spawner : PoolObject
     private void Awake()
     {
         _spawnPoints = _spawnPosition.transform.position;
-        Initialization(_templates, _player);
+        Initialization(_templates, _score);
         _elapsedTime = _timeBetweenSpawn;
     }
 
