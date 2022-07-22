@@ -2,26 +2,26 @@ using UnityEngine;
 using TMPro;
 public class ScoreBar : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _score;
-    [SerializeField] private Player _player;
+    [SerializeField] private TMP_Text _text;
+    [SerializeField] private Score _score;
 
     private void Start()
     {
-        _score.text = "SCORE .. 0";
+        _text.text = "SCORE .. 0";
     }
 
     private void OnEnable()
     {
-        _player.ScoreChanged += SetScore;
+        _score.ValueChanged += SetScore;
     }
 
     private void OnDisable()
     {
-        _player.ScoreChanged -= SetScore;
+        _score.ValueChanged -= SetScore;
     }
 
     private void SetScore(int value)
     {
-        _score.text = "SCORE .. " + value.ToString();
+        _text.text = "SCORE .. " + value.ToString();
     }
 }

@@ -6,6 +6,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Button _playButton;
     [SerializeField] private Spawner _spawner;
+    [SerializeField] private Score _score;
 
     private void OnEnable()
     {
@@ -26,5 +27,6 @@ public class Menu : MonoBehaviour
         _spawner.gameObject.SetActive(true);
         _spawner.DisableAllObjects();
         gameObject.SetActive(false);
+        _score.Restart();
     }
 }

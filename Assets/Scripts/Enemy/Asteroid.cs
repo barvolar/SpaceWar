@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class Asteroid : MonoBehaviour
 {
-    private Player _player;
+    private Score _score;
     private Rigidbody _rigidBody;
     private float _speed = 3000f;
     private float _health = 2f;
@@ -41,12 +41,12 @@ public class Asteroid : MonoBehaviour
         if (_health <= 0)
         {
             gameObject.SetActive(false);
-            _player.AddScore();
+            _score.Add();
         }
     }
 
-    public void SetPlayer(Player player)
+    public void SetScore(Score score)
     {
-        _player = player;
+        _score = score;
     }
 }

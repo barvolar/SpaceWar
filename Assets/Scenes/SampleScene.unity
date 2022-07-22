@@ -10145,7 +10145,7 @@ MonoBehaviour:
   - {fileID: 2885708195796332715, guid: 6c447eedac98ba347b5527c3a7ab9378, type: 3}
   - {fileID: 6157767928489986474, guid: 4055eb122d9824c45b6ca93765e93811, type: 3}
   - {fileID: 809006399335124415, guid: cea47b4f65d40ec4380796340dd85ed3, type: 3}
-  _player: {fileID: 5380175253603540301}
+  _score: {fileID: 1721859673075177}
   _timeBetweenSpawn: 1
   _minSpawnPositionX: -35
   _maxSpawnPositionX: 35
@@ -34258,8 +34258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd08df5f1987e1a4e823c3ae2099ddc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _score: {fileID: 1895272723}
-  _player: {fileID: 5380175253603540301}
+  _text: {fileID: 1895272723}
+  _score: {fileID: 1721859673075177}
 --- !u!114 &1001960589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39470,6 +39470,7 @@ MonoBehaviour:
   _player: {fileID: 5380175253603540301}
   _playButton: {fileID: 1925242768}
   _spawner: {fileID: 236550455}
+  _score: {fileID: 1721859673075177}
 --- !u!1 &1518973638
 GameObject:
   m_ObjectHideFlags: 0
@@ -39505,7 +39506,7 @@ MonoBehaviour:
   - {fileID: 3022790871084903077, guid: 3f8a1ad059c234d46a9c44dc83894d6e, type: 3}
   - {fileID: 310508809301765957, guid: 0e12f400130ca014fac5b2d5bf47c6ef, type: 3}
   - {fileID: 94663476610887883, guid: 887934e9288f7d4498750a4b4a9474c0, type: 3}
-  _player: {fileID: 0}
+  _score: {fileID: 0}
   _timeBetweenSpawn: 110
   _minSpawnPositionX: -600
   _maxSpawnPositionX: 600
@@ -44633,7 +44634,7 @@ MonoBehaviour:
   - {fileID: 2069162772340012729, guid: 1b973b570d0114343898507b59dc7b93, type: 3}
   - {fileID: 1531591568864042222, guid: 341bbc19d1893b9478ef31095dcecf04, type: 3}
   - {fileID: 7974518924248089431, guid: aa6add783f3ce8a4d9efd0393f59da70, type: 3}
-  _player: {fileID: 0}
+  _score: {fileID: 0}
   _timeBetweenSpawn: 1
   _minSpawnPositionX: -600
   _maxSpawnPositionX: 600
@@ -49496,6 +49497,7 @@ GameObject:
   - component: {fileID: 1721859673075174}
   - component: {fileID: 5380175253603540301}
   - component: {fileID: 1721859673075175}
+  - component: {fileID: 1721859673075177}
   - component: {fileID: 1721859673075176}
   m_Layer: 0
   m_Name: Player
@@ -49518,7 +49520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 8.73
   _distanceFromCamera: 100
-  _diePosition: {fileID: 0}
 --- !u!114 &1721859673075174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49645,6 +49646,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1721859673075177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721859673075172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa207c9a173c50d4f9235cce5ad375ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4243328234164108
 Transform:
   m_ObjectHideFlags: 0

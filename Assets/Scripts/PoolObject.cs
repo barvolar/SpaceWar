@@ -8,7 +8,7 @@ public class PoolObject : MonoBehaviour
 
     private List<GameObject> _pool = new List<GameObject>();
 
-    protected void Initialization(GameObject[] asteroids, Player player)
+    protected void Initialization(GameObject[] asteroids, Score score)
     {
         for (int i = 0; i < asteroids.Length; i++)
         {
@@ -17,7 +17,7 @@ public class PoolObject : MonoBehaviour
                 GameObject spawnedAsteroid = Instantiate(asteroids[i], _container.transform);
 
                 if (spawnedAsteroid.TryGetComponent(out Asteroid asteroid))
-                    asteroid.SetPlayer(player);
+                    asteroid.SetScore(score);
 
                 spawnedAsteroid.gameObject.transform.rotation = _container.transform.rotation;
                 spawnedAsteroid.gameObject.SetActive(false);

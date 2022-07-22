@@ -8,21 +8,13 @@ public class Player : MonoBehaviour
 
     private float _health;
     private float _maxHealth = 3;
-    private int _score;
 
     public float MaxHealth => _maxHealth;
-    public event UnityAction<int> ScoreChanged;
     public event UnityAction<float> HealtChanged;
 
     private void Awake()
     {
         Restart();
-    }
-
-    public void AddScore()
-    {
-        _score++;
-        ScoreChanged?.Invoke(_score);
     }
 
     public void TakeDamage(float damage)
@@ -42,8 +34,6 @@ public class Player : MonoBehaviour
     {
         _health = _maxHealth;
         HealtChanged?.Invoke(_health);
-        _score = 0;
-        ScoreChanged?.Invoke(_score);
         _effectLowHealth.SetActive(false);
         _effectMidleHealth.SetActive(false);
     }
