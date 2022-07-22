@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
         _health -= damage;
         HealtChanged?.Invoke(_health);
 
-        if (_health <= (_maxHealth/3f)*2f)                   
+        if (_health <= GetTwoThirdsValue(_maxHealth))                   
            _effectMidleHealth.SetActive(true);
 
 
-        if (_health <= (_maxHealth / 2f))
+        if (_health <= GetHalfValue(_maxHealth))
             _effectLowHealth.SetActive(true);
     }
 
@@ -46,5 +46,17 @@ public class Player : MonoBehaviour
         ScoreChanged?.Invoke(_score);
         _effectLowHealth.SetActive(false);
         _effectMidleHealth.SetActive(false);
+    }
+
+    private float GetTwoThirdsValue(float value)
+    {
+        float result = (value / 3f) * 2f;
+        return result;
+    } 
+
+    private float GetHalfValue(float value) 
+    {
+        float result = value / 2f;
+        return result;
     }
 }
