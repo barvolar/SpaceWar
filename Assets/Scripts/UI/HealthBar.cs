@@ -13,13 +13,8 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.HealtChanged += ChangedCurrentValue;
-    }
-
-    private void OnDisable()
-    {
-        _player.HealtChanged -= ChangedCurrentValue;
-    }
+        _player.HealtChanged += OnHealtChanged;
+    } 
 
     private void Update()
     {
@@ -32,7 +27,12 @@ public class HealthBar : MonoBehaviour
             _menu.gameObject.SetActive(true);
     }
 
-    private void ChangedCurrentValue(float value)
+    private void OnDisable()
+    {
+        _player.HealtChanged -= OnHealtChanged;
+    }
+
+    private void OnHealtChanged(float value)
     {
         _slider.maxValue = _player.MaxHealth;
 

@@ -19,7 +19,6 @@ public class Planet : MonoBehaviour
         _rotationSpeed=Random.Range(_minRotationSpeed, _maxRotationSpeed);
     }
 
-
     private void Update()
     {
         transform.Rotate(Vector3.up * _rotationSpeed *  Time.deltaTime);
