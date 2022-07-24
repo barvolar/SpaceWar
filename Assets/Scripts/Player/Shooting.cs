@@ -11,14 +11,14 @@ public class Shooting : MonoBehaviour
 
     private WaitForSeconds _waitForSeconds;
 
-    private void Start()
-    {
-        _waitForSeconds = new WaitForSeconds(_shootSpeed);      
-    }
-
     private void OnEnable()
     {
         StartCoroutine(SpawnBullet());
+    }
+
+    private void Start()
+    {
+        _waitForSeconds = new WaitForSeconds(_shootSpeed);      
     }
 
     private void OnDisable()

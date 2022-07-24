@@ -20,7 +20,7 @@ public class PlayerMover : MonoBehaviour
 
         Vector3 mouseScreenToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector3 position = Vector3.Lerp(transform.position, mouseScreenToWorld, 1.0f - Mathf.Exp(-_speed * Time.deltaTime));
+        Vector3 position = Vector3.Lerp(transform.position, mouseScreenToWorld, _speed * Time.deltaTime);
         transform.position = new Vector3(position.x, transform.position.y, transform.position.z);
         ClampPosition();
     }
